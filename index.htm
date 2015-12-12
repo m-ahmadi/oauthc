@@ -1,0 +1,124 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+	<!-- <link rel="stylesheet" type="text/css" href="css/arash.css"> -->
+	
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-rtl.css"/>
+	<!-- <link rel="stylesheet" type="text/css" href="css/materialize.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+	
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/alertify.core.css"/>
+	<link rel="stylesheet" type="text/css" href="css/alertify.default.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+<header class="a-header">
+	<nav class="navbar navbar-inverse a-nav a-mbz">
+		<div class="navbar-header">
+			<h4 class="navbar-brand a-slogen a-pz" href="" >شبکه یکپارچه مخابراتی شهرداری تهران</h4>
+			<!-- <br />
+			<ul class="da-list">
+				<li><a href="#">خانه</a></li>
+				<li><a href="#">تماسهای من</a></li>
+				<li><a href="#">تماسهای زیر گروه ها</a></li>
+			</ul> -->
+		</div>
+	</nav>
+</header>
+
+<div class="a-pr">
+	<div class="overlap">
+	</div>
+
+	<div class="wrapper">
+		<div class="container">
+		
+			
+			
+			<!-- style="color: #115889; margin-bottom:1em;" -->
+			
+			<h1 class="a-heading fn-heading">ورود به سامانه</h1>
+			<!-- <div class="a-service-info">
+				<h6>شبکه یکپارچه مخابراتی شهرداری تهران</h6>
+				<p>نرم افزار گزارش ارتباطات</p>
+				<img class="img-responsive" src="images/cpni.jpg">
+			</div> -->
+			<div class="card">
+			
+				<div class="a-messages">
+				</div>
+				<input id="result" type="hidden" name="wronglogin"		value="true">
+				
+				<form class="container" id="login-form" method="GET" action="authenticate">
+					<!--PlaceHolder-Hidden-->
+					<input type="hidden" name="client_id"		value="">
+					<input type="hidden" name="scope"			value="1">
+					<input type="hidden" name="state"			value="2">
+					<input type="hidden" name="redirect_uri" 	value="google.com">
+					<input type="hidden" name="salt"			value="">
+
+					
+					<div class="input-container" id="fn-shake-username">
+						<input id="username" type="username" required="required" autofocus>
+						<!-- <span id="fn-salt-span">در حال بررسی نام کاربری</span> -->
+						<label id="fn-label-user" for="username">نام کاربری</label>
+						<div class="bar"></div>
+					</div>
+					<div class="input-container" id="fn-shake-password">
+						<input id="password" type="password" name="password" required="required">
+						<label id="fn-label-pass" for="password">رمز عبور</label>
+						<div class="bar"></div>
+					</div>
+					
+					<div class="input-container">
+						<button class="btn" type="submit" id="login-button" style="font-family:tahoma;">ورود</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<ul class="bg-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	
+	
+	
+	
+</div>
+
+
+<footer class="col-md-12  a-footer">
+	<ul class="list-inline a-margin-auto">
+		<li>شهرداری تهران</li>
+		<li><a href="http://10.255.148.60/cgi-bin/oauth2/privacy" target="_blank">حریم شخصی کاربران</a></li>
+		<li><a href="http://10.255.148.60/cgi-bin/oauth2/privacy" target="_blank">درباره ما</a></li>
+	</ul>
+</footer>
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<!-- <script type="text/javascript" src="js/materialize.js"></script> -->
+<!-- <script type="text/javascript" src="js/arash.js"></script> -->
+<script type="text/javascript" src="js/alertify.js"></script>
+<script type="text/javascript" src="js/move.js"></script>
+<script type="text/javascript" src="js/fn.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<!-- <script type="text/javascript" src="js/spin.min.js"></script> -->
+</body>
+</html>

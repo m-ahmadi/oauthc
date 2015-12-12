@@ -1,0 +1,79 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<!-- <link rel="stylesheet" type="text/css" href="css/arash.css"> -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+
+<header id="testHeaderContainer" class="gradient">
+	<div id="testHeader">
+		<div>
+			<img class="testLogo" src="images/shahrdari.png">
+		</div>
+		<div id="dateInfo">
+			<a href="">ورود به سایت</a>
+		</div>
+	</div>
+</header>
+
+
+<hgroup>
+	<table style="width:400px;position:relative; margin:auto;float: center">
+		<tbody>
+			<tr>
+				<td>
+					<h2>شبکه یکپارچه مخابراتی شهرداری تهران</h2>
+					<p>نرم افزار گزارش ارتباطات</p>
+				</td>
+				<td style="vertrical-align:top;">
+					<img class="shady" style="margin: auto; width: 80px; height: 80px;" src="images/cpni.jpg">
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</hgroup>
+
+<form name="theForm" id="theForm" action="http://10.255.148.60/cgi-bin/oauth2/authenticate">
+	<input type="hidden" name="action" value="Authen">
+	<input type="hidden" name="salt" id="salt" value="">
+	<input type="hidden" name="action" value="Authen">
+	<input type="hidden" name="state" value="http://10.255.135.92/app/">
+	<input type="hidden" name="response_type" value="code">
+	<input type="hidden" name="scope" value="http://10.255.148.60/cgi-bin/oauth2/login">
+	<input type="hidden" name="redirect_uri" value="http://10.255.135.92/cgi-bin/cpni_oauth_cb">
+	<input type="hidden" name="client_id" value="i7CCWQPY0oTxrmr7HolywI3oNzzPfEPIl4MQNfXG">
+	<input type="hidden" name="password" value="">
+	<input type="hidden" name="salt" value="6/wo1ou1Plku8LY87hD9SdI66brkLvqRkAKn65h/">
+	<input type="hidden" name="username" value="">
+
+	<div class="group">
+		<input name="username" type="username" id="username"><span class="highlight"></span><span class="bar"></span>
+		<label>نام کاربری</label>
+	</div>
+	<div class="group">
+		<input name="password" type="password"><span class="highlight"></span><span class="bar"></span>
+		<label>گذرواژه</label>
+	</div>
+	<button type="button" id="authen" name="button1" value="login" class="button buttonBlue" disabled="">ورود
+		<div class="ripples buttonRipples"><span class="ripplesCircle"></span></div>
+	</button>
+</form>
+
+
+<div id="testFooter" class="gradient">
+	<ul class="testNavigation">
+		<li>شهرداری تهران</li>
+		<li><a target="_blank" href="http://10.255.148.60/cgi-bin/oauth2/privacy">حریم شخصی کاربران</a></li>
+		<li><a target="_blank" href="http://10.255.148.60/cgi-bin/oauth2/aboutUs">درباره ی ما</a></li>
+	</ul>
+</div>
+
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- <script type="text/javascript" src="js/arash.js"></script> -->
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
