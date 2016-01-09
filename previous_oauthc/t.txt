@@ -1,0 +1,58 @@
+callback = function (success, saltReqStat, data) { // unused
+		if ( typeof success !== 'boolean' ) { throw new Error('submit.callback:  The first arg is not boolean.'); }
+		
+		if ( success === true ) {
+			
+			successScenario(data.url);
+			
+		} else if ( success === false ) {
+			
+			failScenario(saltReqStat);
+			
+		}
+		/* // previous way
+		dom.title.removeClass('form-success');
+		dom.title.animate({fontSize: '40px'}, 400);
+		dom.title.text(messages.heading);
+		$( selectors.later.ajaxImg ).remove();
+		a.dom.messages.css(css.messagesDefault);
+		dom.messages.empty();
+		
+		if ( success === true ) {
+			dom.messages.css({background : colors.success});
+			dom.messages.append( $.parseHTML('<p>' + messages.success + '</p>') );
+		} else if ( success === false ) {
+			dom.messages.css({background : colors.error});
+			dom.messages.append( $.parseHTML('<p>' + messages.fail + '</p>') );
+		}
+		
+		dom.messages.css({opacity: '1'});
+		
+		if ( success === true ) {
+			dom.messages.toggleClass('animated tada');
+			setTimeout(function () {
+				dom.messages.animate({opacity: '0'}, {
+					duration: 1000,
+					complete: function () {
+						//window.location.replace( data.url );
+					}
+				});
+			}, 2000);
+		} else if ( success === false ) {
+			$( selectors.later.resultMessage ).toggleClass('animated wobble');
+			setTimeout(function () {
+				dom.messages.animate({opacity: '0'}, 1000, function () {
+					dom.form.css({visibility: 'visible'});
+					dom.form.animate({opacity: 1}, 1000, function () {
+						dom.form[0].reset();
+						dom.username.attr({disabled: false});
+						dom.password.attr({disabled: false});
+						dom.submit.attr({disabled: false});
+						dom.username[0].focus();
+					});
+				});
+				flags.saltRdy = false;
+			}, 3000);
+		}
+		*/
+	},

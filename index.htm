@@ -1,36 +1,84 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
 	<!-- <link rel="stylesheet" type="text/css" href="css/arash.css"> -->
-	<link rel="icon" type="image/x-icon" href="favicon.ico"/>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-rtl.css"/>
+	<link rel="icon" type="image/x-icon" href="/oauthc/images/favicon.ico"/>
+	
+	<link rel="stylesheet" type="text/css" href="/oauthc/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="/oauthc/css/bootstrap-rtl.css"/>
+	
 	<!-- <link rel="stylesheet" type="text/css" href="css/materialize.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
 	
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/alertify.core.css"/>
-	<link rel="stylesheet" type="text/css" href="css/alertify.default.css"/>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- <link rel="stylesheet" type="text/css" href="css/reset-ericmeyer.css"> -->
+	
+	<link rel="stylesheet" type="text/css" href="/oauthc/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="/oauthc/css/alertify.core.css"/>
+	<link rel="stylesheet" type="text/css" href="/oauthc/css/alertify.default.css"/>
+	<link rel="stylesheet" type="text/css" href="/oauthc/css/animate-animo.min.css"/>
+	
+	<link rel="stylesheet" type="text/css" href="/oauthc/css/style.css">
 	<title>سامانه ورود</title>
 </head>
 
 <body>
 
-<header class="a-header">
+<!-- <header class="a-header">
 	<nav class="navbar navbar-inverse a-nav a-mbz">
 		<div class="navbar-header">
-			<h4 class="navbar-brand a-slogen a-pz" href="" >شبکه یکپارچه مخابراتی شهرداری تهران</h4>
-			<!-- <br />
-			<ul class="da-list">
-				<li><a href="#">خانه</a></li>
-				<li><a href="#">تماسهای من</a></li>
-				<li><a href="#">تماسهای زیر گروه ها</a></li>
-			</ul> -->
+			<h4 class="navbar-brand a-nav-slogen a-pz" href="" >سامانه گزارش گیری شبکه یکپارچه مخابراتی شهرداری تهران</h4>
 		</div>
+		<ul class="text-left list-unstyled a-nav-time">
+			<li class="">
+				<span class="fn-fadate-dayname"></span>
+				<span>،</span>
+				<span class="fn-fadate-daynumber"></span>
+				<span class="fn-fadate-monthname"></span>ماه
+				<span class="fn-fadate-year"></span>
+			</li>
+			<li class="">
+				<span class="fn-time-second"></span>
+				<span class="fn-time-colon">&#58;</span>
+				<span class="fn-time-minute"></span>
+				<span class="fn-time-colon">&#58;</span>
+				<span class="fn-time-hour"></span>
+			</li>
+		</ul>
 	</nav>
+</header> -->
+
+<header class="header">
+	<div class="header-right">
+		<h1 class="header-right-maintitle">سامانه گزارش گیری شبکه یکپارچه مخابـراتی شهـرداری تهـران</h1>
+		<h2 class="header-right-subtitle">شهـــــرداری تهـــــران</h2> <!-- 5 char -->
+	</div>
+	<div class="header-left">
+		<div class="header-leftdata hidden">
+			<!-- <h4 class="fn-current_user-title"></h4> -->
+			<h2 class="header-endate">
+				<span class="fn-endate-dayname"></span>,
+				<span class="fn-endate-daynumber"></span>
+				<span class="fn-endate-monthname"></span>,
+				<span class="fn-endate-year"></span>
+			</h2>
+			<h2 class="header-fadate">
+				<span class="fn-fadate-dayname"></span>
+				<span>،</span>
+				<span class="fn-fadate-daynumber"></span>
+				<span class="fn-fadate-monthname"></span>&zwnj;ماه
+				<span class="fn-fadate-year"></span>
+			</h2>
+			<h2 class="header-time">
+				<span class="fn-time-second"></span>
+				<span class="header-colon fn-time-colon">&#58;</span>
+				<span class="fn-time-minute"></span>
+				<span class="header-colon fn-time-colon">&#58;</span>
+				<span class="fn-time-hour"></span>
+			</h2>
+		</div>
+	</div>
 </header>
 
 <div class="a-pr">
@@ -39,11 +87,6 @@
 
 	<div class="wrapper">
 		<div class="container">
-		
-			
-			
-			<!-- style="color: #115889; margin-bottom:1em;" -->
-			
 			<h1 class="a-heading fn-heading">ورود به سامانه</h1>
 			<!-- <div class="a-service-info">
 				<h6>شبکه یکپارچه مخابراتی شهرداری تهران</h6>
@@ -51,29 +94,33 @@
 				<img class="img-responsive" src="images/cpni.jpg">
 			</div> -->
 			<div class="card">
-			
+				<div class="top-msg fn-topmsg"></div>
 				<div class="a-messages">
 				</div>
 				<input id="result" type="hidden" name="wronglogin"		value="true">
 				
 				<form class="container" id="login-form" method="GET" action="authenticate">
 					<!--PlaceHolder-Hidden-->
-					<input type="hidden" name="client_id"		value="">
-					<input type="hidden" name="scope"			value="1">
-					<input type="hidden" name="state"			value="2">
-					<input type="hidden" name="redirect_uri" 	value="google.com">
-					<input type="hidden" name="salt"			value="">
-
+					<!--PlaceHolder-Date-->
+					<!--PlaceHolder-Time-->
+					<input type="hidden" name="client_id"		value="">				<!-- Remove -->
+					<input type="hidden" name="scope"			value="1">				<!-- Remove -->
+					<input type="hidden" name="state"			value="2">				<!-- Remove -->
+					<input type="hidden" name="redirect_uri" 	value="google.com">		<!-- Remove -->
+					<input type="hidden" name="salt"			value="">   			<!-- Don't Remove -->
+					
+					<div class="input-container fn-resend-verify no-display">
+						<button type="button" class="fn-resend_button">ارسال مجدد کد امنیتی</button>
+					</div>
 					
 					<div class="input-container" id="fn-shake-username">
-						<input id="username" type="username" required="required" autofocus>
-						<!-- <span id="fn-salt-span">در حال بررسی نام کاربری</span> -->
+						<input id="username" type="username" required="required" autofocus> 
 						<label id="fn-label-user" for="username">نام کاربری</label>
 						<div class="bar"></div>
 					</div>
 					<div class="input-container" id="fn-shake-password">
 						<input id="password" type="password" name="password" required="required">
-						<label id="fn-label-pass" for="password">رمز عبور</label>
+						<label id="fn-label-pass" for="password">کلمه عبور</label>
 						<div class="bar"></div>
 					</div>
 					
@@ -96,18 +143,13 @@
 			<li></li>
 		</ul>
 	</div>
-	
-	
-	
-	
 </div>
-
 
 <footer class="col-md-12  a-footer">
 	<ul class="list-inline a-margin-auto">
 		<li>شهرداری تهران</li>
-		<li><a href="http://10.255.148.60/cgi-bin/oauth2/privacy" target="_blank">حریم شخصی کاربران</a></li>
-		<li><a href="http://10.255.148.60/cgi-bin/oauth2/privacy" target="_blank">درباره ما</a></li>
+		<li><a href="/oauthc/privacy.htm" target="_blank">حریم شخصی کاربران</a></li>
+		<li><a href="/oauthc/about.htm" target="_blank">درباره ما</a></li>
 	</ul>
 	
 	<!-- <table class="table text-center a-mbn a-footer-table">
@@ -127,15 +169,18 @@
 	
 </footer>
 
-
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/oauthc/js/lib/jquery.min.js"></script>
+<script type="text/javascript" src="/oauthc/js/lib/jquery-ui.min.js"></script>
 <!-- <script type="text/javascript" src="js/materialize.js"></script> -->
 <!-- <script type="text/javascript" src="js/arash.js"></script> -->
-<script type="text/javascript" src="js/alertify.js"></script>
-<script type="text/javascript" src="js/move.js"></script>
-<script type="text/javascript" src="js/fn.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="/oauthc/js/lib/alertify.js"></script>
+<script type="text/javascript" src="/oauthc/js/lib/move.js"></script>
+<script type="text/javascript" src="/oauthc/js/lib/anijs-min.js"></script> 
+<script type="text/javascript" src="/oauthc/js/lib/velocity.min.js"></script>
+<script type="text/javascript" src="/oauthc/js/lib/velocity.ui.min.js"></script>
+<script type="text/javascript" src="/oauthc/js/lib/animo.min.js"></script>
+<script type="text/javascript" src="/oauthc/js/fn.js"></script>
+<script type="text/javascript" src="/oauthc/js/main.js"></script>
 <!-- <script type="text/javascript" src="js/spin.min.js"></script> -->
 </body>
 </html>

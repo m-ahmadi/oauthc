@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+	<!-- <link rel="stylesheet" type="text/css" href="css/arash.css"> -->
+	<link rel="icon" type="image/x-icon" href="/oauthc/images/favicon.ico"/>
+	
+	<link rel="stylesheet" type="text/css" href="/oauthc/css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="/oauthc/css/bootstrap-rtl.css"/>
+	
+	<!-- <link rel="stylesheet" type="text/css" href="css/materialize.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="css/reset.css"> -->
+	
+	<!-- <link rel="stylesheet" type="text/css" href="css/reset-ericmeyer.css"> -->
+	
+	<link rel="stylesheet" type="text/css" href="/oauthc/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="/oauthc/css/alertify.core.css"/>
+	<link rel="stylesheet" type="text/css" href="/oauthc/css/alertify.default.css"/>
+	<link rel="stylesheet" type="text/css" href="/oauthc/css/animate-animo.min.css"/>
+	
+	<link rel="stylesheet" type="text/css" href="/oauthc/css/style.css">
+	<title>سامانه ورود</title>
+</head>
+
+<body>
+
+<!-- <header class="a-header">
+	<nav class="navbar navbar-inverse a-nav a-mbz">
+		<div class="navbar-header">
+			<h4 class="navbar-brand a-nav-slogen a-pz" href="" >سامانه گزارش گیری شبکه یکپارچه مخابراتی شهرداری تهران</h4>
+		</div>
+		<ul class="text-left list-unstyled a-nav-time">
+			<li class="">
+				<span class="fn-fadate-dayname"></span>
+				<span>،</span>
+				<span class="fn-fadate-daynumber"></span>
+				<span class="fn-fadate-monthname"></span>ماه
+				<span class="fn-fadate-year"></span>
+			</li>
+			<li class="">
+				<span class="fn-time-second"></span>
+				<span class="fn-time-colon">&#58;</span>
+				<span class="fn-time-minute"></span>
+				<span class="fn-time-colon">&#58;</span>
+				<span class="fn-time-hour"></span>
+			</li>
+		</ul>
+	</nav>
+</header> -->
+
+<header class="header">
+	<div class="header-right">
+		<h1 class="header-right-maintitle">شبکه یکپارچه مخابـراتی شهـرداری تهـران</h1>
+		<h2 class="header-right-subtitle">شهـــــرداری تهـــــران</h2> <!-- 5 char -->
+	</div>
+	<div class="header-left">
+		<div class="header-leftdata">
+			<!-- <h4 class="fn-current_user-title"></h4> -->
+			<h2 class="header-endate">
+				<span class="fn-endate-dayname"></span>,
+				<span class="fn-endate-daynumber"></span>
+				<span class="fn-endate-monthname"></span>,
+				<span class="fn-endate-year"></span>
+			</h2>
+			<h2 class="header-fadate">
+				<span class="fn-fadate-dayname"></span>
+				<span>،</span>
+				<span class="fn-fadate-daynumber"></span>
+				<span class="fn-fadate-monthname"></span>&zwnj;ماه
+				<span class="fn-fadate-year"></span>
+			</h2>
+			<h2 class="header-time">
+				<span class="fn-time-second"></span>
+				<span class="header-colon fn-time-colon">&#58;</span>
+				<span class="fn-time-minute"></span>
+				<span class="header-colon fn-time-colon">&#58;</span>
+				<span class="fn-time-hour"></span>
+			</h2>
+		</div>
+	</div>
+</header>
+
+<div class="a-pr">
+	<div class="overlap">
+	</div>
+
+	<div class="wrapper">
+		<div class="container">
+			<h1 class="a-heading fn-heading">ورود به سامانه</h1>
+			<!-- <div class="a-service-info">
+				<h6>شبکه یکپارچه مخابراتی شهرداری تهران</h6>
+				<p>نرم افزار گزارش ارتباطات</p>
+				<img class="img-responsive" src="images/cpni.jpg">
+			</div> -->
+			<div class="card">
+				<div class="a-messages">
+				</div>
+				<input id="result" type="hidden" name="wronglogin"		value="true">
+				
+				<form class="container" id="login-form" method="GET" action="authenticate">
+					<!--PlaceHolder-Hidden-->
+					<!--PlaceHolder-Date-->
+					<!--PlaceHolder-Time-->
+					<input type="hidden" name="salt"			value="">
+					
+					<div class="input-container" id="fn-shake-username">
+						<input id="username" type="username" required="required" autofocus> 
+						<label id="fn-label-user" for="username">نام کاربری</label>
+						<div class="bar"></div>
+					</div>
+					<div class="input-container" id="fn-shake-password">
+						<input id="password" type="password" name="password" required="required">
+						<label id="fn-label-pass" for="password">کلمه عبور</label>
+						<div class="bar"></div>
+					</div>
+					
+					<div class="input-container">
+						<button class="btn" type="submit" id="login-button" style="font-family:tahoma;">ورود</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<ul class="bg-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</div>
+
+<footer class="col-md-12  a-footer">
+	<ul class="list-inline a-margin-auto">
+		<li>شهرداری تهران</li>
+		<li><a href="/oauthc/privacy.htm" target="_blank">حریم شخصی کاربران</a></li>
+		<li><a href="/oauthc/about.htm" target="_blank">درباره ما</a></li>
+	</ul>
+	
+	<!-- <table class="table text-center a-mbn a-footer-table">
+		<tr>
+			<td>شهرداری تهران</td>
+			<td><a target="_blank" href="http://10.255.148.60/cgi-bin/oauth2/privacy">حریم شخصی کاربران</a></td>
+			<td>شهرداری تهران</td>
+			<td><a target="_blank" href="http://10.255.148.60/cgi-bin/oauth2/privacy">حریم شخصی کاربران</a></td>
+			<td>شهرداری تهران</td>
+			<td><a target="_blank" href="http://10.255.148.60/cgi-bin/oauth2/privacy">حریم شخصی کاربران</a></td>
+			<td>شهرداری تهران</td>
+			<td><a target="_blank" href="http://10.255.148.60/cgi-bin/oauth2/privacy">حریم شخصی کاربران</a></td>
+			
+		</tr>
+	</table> -->
+	
+	
+</footer>
+
+<script type="text/javascript" src="/oauthc/js/jquery.min.js"></script>
+<script type="text/javascript" src="/oauthc/js/jquery-ui.min.js"></script>
+<!-- <script type="text/javascript" src="js/materialize.js"></script> -->
+<!-- <script type="text/javascript" src="js/arash.js"></script> -->
+<script type="text/javascript" src="/oauthc/js/alertify.js"></script>
+<script type="text/javascript" src="/oauthc/js/move.js"></script>
+<script type="text/javascript" src="/oauthc/js/anijs-min.js"></script> 
+<script type="text/javascript" src="/oauthc/js/velocity.min.js"></script>
+<script type="text/javascript" src="/oauthc/js/velocity.ui.min.js"></script>
+<script type="text/javascript" src="/oauthc/js/animo.min.js"></script>
+<script type="text/javascript" src="/oauthc/js/fn.js"></script>
+<script type="text/javascript" src="/oauthc/js/main.js"></script>
+<!-- <script type="text/javascript" src="js/spin.min.js"></script> -->
+</body>
+</html>

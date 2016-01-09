@@ -1,0 +1,2 @@
+hidden inputs salt
+server ''
